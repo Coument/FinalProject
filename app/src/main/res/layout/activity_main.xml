@@ -4,133 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:paddingTop="16dp"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    tools:context=".MainActivity">
 
-<<<<<<< HEAD
-=======
-    <LinearLayout
-        android:id="@+id/layout1"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/gold"
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="gold:NULL"
-            android:textSize="24dp" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="經驗值:NULL/NULL"
-            android:textSize="24dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout2"
-        android:layout_width="192dp"
-        android:layout_height="408dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout1">
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:textSize="24dp"
-            android:gravity="center"
-            android:text="第一層" />
+        android:layout_height="match_parent"
+        android:background="#000000">
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="195dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:id="@+id/graduate"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="225dp"
+            android:src="@drawable/graduate" />
+    </RelativeLayout>
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="153dp"
-            android:textSize="22dp"
-            android:gravity="center"
-            android:text=" HP  :NULL\n\nATK :NULL\n\nDEF: NULL\n\n" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout3"
-        android:layout_width="391dp"
-        android:layout_height="101dp"
-        android:orientation="horizontal"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DokiDoki大冒險"
+        android:textSize="50sp"
+        android:textFontWeight="10"
+        android:textColor="#FFD700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout2"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="468dp">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="重置" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="開始戰鬥" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout4"
-        android:layout_width="392dp"
-        android:layout_height="215dp"
-        android:orientation="horizontal"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="《學分守護者》"
+        android:textSize="38sp"
+        android:textFontWeight="10"
+        android:textColor="#C0C0C0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout3"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="570dp">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="210dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="24dp"
-            android:gravity="center"
-            android:text=" HP  :NULL\n\nATK :NULL\n\nDEF: NULL\n\n" />
+    <Button
+        android:id="@+id/new_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New game"
+        android:textSize="40sp"
+        android:textFontWeight="20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"/>
 
-        <LinearLayout
-            android:layout_width="156dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="84dp"
-                android:gravity="center"
-                android:text="治療花費: NULL"
-                android:textSize="18dp" />
-
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="match_parent"
-                android:layout_height="58dp"
-                android:text="治療" />
-        </LinearLayout>
-    </LinearLayout>
->>>>>>> origin/liflas1130
+    <Button
+        android:id="@+id/continue_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textFontWeight="20"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

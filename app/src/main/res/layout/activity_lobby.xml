@@ -1,74 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity"
+android:paddingTop="16dp"
+android:paddingBottom="16dp"
+android:paddingLeft="16dp"
+android:paddingRight="16dp">
+
+<LinearLayout
+    android:id="@+id/layout1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    app:layout_constraintTop_toTopOf="parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/gold"
+        android:layout_width="150dp"
         android:layout_height="match_parent"
-        android:background="#000000">
-
-        <ImageView
-            android:id="@+id/graduate"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:src="@drawable/graduate"
-            android:layout_marginTop="225dp"
-            android:layout_marginLeft="45dp" />
-    </RelativeLayout>
+        android:layout_weight="1"
+        android:text="Gold:NULL"
+        android:textSize="24dp" />
 
     <TextView
+        android:id="@+id/exp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DokiDoki大冒險"
-        android:textSize="50sp"
-        android:textFontWeight="10"
-        android:textColor="#FFD700"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="經驗值:NULL/100"
+        android:textSize="24dp"/>
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/layout2"
+    android:layout_width="192dp"
+    android:layout_height="408dp"
+    android:orientation="vertical"
+    android:layout_marginLeft="90dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/layout1">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="《學分守護者》"
-        android:textSize="38sp"
-        android:textFontWeight="10"
-        android:textColor="#C0C0C0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        android:id="@+id/lvl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:text="第1層" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/enemy_status"
+        android:layout_width="match_parent"
+        android:layout_height="153dp"
+        android:textSize="22dp"
+        android:gravity="center"
+        android:text=" HP  :NULL\n\nATK :NULL" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/layout3"
+    android:layout_width="391dp"
+    android:layout_height="101dp"
+    android:orientation="horizontal"
+    android:layout_marginLeft="45dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/layout2"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="468dp">
 
     <Button
+        android:id="@+id/reset_lvl"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:textSize="40sp"
-        android:textFontWeight="20"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8"/>
+        android:layout_height="match_parent"
+        android:text="重置" />
 
     <Button
+        android:id="@+id/start_battle"
+        android:layout_marginLeft="90dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Continue"
-        android:textFontWeight="20"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        android:layout_height="match_parent"
+        android:text="開始戰鬥" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/layout4"
+    android:layout_width="392dp"
+    android:layout_height="215dp"
+    android:orientation="horizontal"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/layout3"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="570dp">
+
+    <TextView
+        android:id="@+id/your_status"
+        android:layout_width="174dp"
+        android:layout_height="121dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text=" HP  :NULL\n\nATK :NULL"
+        android:textSize="24dp" />
+
+    <LinearLayout
+        android:layout_width="164dp"
+        android:layout_height="127dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/heal_text"
+            android:layout_width="160dp"
+            android:layout_height="53dp"
+            android:gravity="center"
+            android:text="學分費: 100"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/buy_button"
+            android:layout_width="156dp"
+            android:layout_height="58dp"
+            android:text="購買" />
+    </LinearLayout>
+</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

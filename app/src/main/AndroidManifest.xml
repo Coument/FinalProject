@@ -13,12 +13,10 @@
         android:theme="@style/Theme.FinalProject"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
-            android:name=".battle"
-=======
-            android:name=".lobby"
->>>>>>> origin/davccc
+            android:name=".end"
             android:exported="false" />
+        <activity android:name=".lobby" />
+        <activity android:name=".battle" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
