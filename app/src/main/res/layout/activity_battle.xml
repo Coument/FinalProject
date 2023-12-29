@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/run"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:text="run"
+        app:layout_constraintStart_toEndOf="@id/btn_paper"
+        app:layout_constraintTop_toTopOf="@id/btn_paper" />
+
+    <Button
+        android:id="@+id/btn_scissor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="剪刀"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="614dp" />
+
+    <Button
+        android:id="@+id/btn_stone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="石頭"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@id/btn_scissor"
+        app:layout_constraintTop_toTopOf="@id/btn_scissor"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="616dp" />
+
+    <Button
+        android:id="@+id/btn_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="布"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@id/btn_stone"
+        app:layout_constraintTop_toTopOf="@id/btn_stone"
+        tools:layout_editor_absoluteX="241dp"
+        tools:layout_editor_absoluteY="616dp" />
+
+    <TextView
+        android:id="@+id/layers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="層數:1"
+        android:layout_margin="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="26dp" />
+
+    <TextView
+        android:id="@+id/hp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100HP/100HP"
+        android:textSize="25dp"
+        android:layout_margin="128dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="194dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="243dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="hp"
+        tools:srcCompat="@drawable/IMG_0687" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
