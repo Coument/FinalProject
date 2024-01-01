@@ -46,7 +46,7 @@ public class battle extends AppCompatActivity {
                 Image.setImageResource(R.drawable.img_d);
                 break;
             default:
-                Image.setImageResource(R.drawable.img_a);
+                Image.setImageResource(R.drawable.img);
         }
 
         int your_now_hp=setYour_hp();
@@ -57,15 +57,15 @@ public class battle extends AppCompatActivity {
         temp_your_hp=your_now_hp;
 
         btn_paper.setOnClickListener(v -> {
-            Toast.makeText(this,"你選擇的是 布",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"你選擇的是【布】",Toast.LENGTH_SHORT).show();
             choice=0;
         });
         btn_stone.setOnClickListener(v -> {
-            Toast.makeText(this,"你選擇的是 石頭",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"你選擇的是【石頭】",Toast.LENGTH_SHORT).show();
             choice=1;
         });
         btn_scissor.setOnClickListener(v -> {
-            Toast.makeText(this,"你選擇的是 剪刀",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"你選擇的是【剪刀】",Toast.LENGTH_SHORT).show();
             choice=2;
         });
         run.setOnClickListener(v -> {
@@ -103,7 +103,7 @@ public class battle extends AppCompatActivity {
 
                 cursor = dbrw.rawQuery("SELECT * FROM myTable WHERE data LIKE 'GOLD'", null);
                 cursor.moveToFirst();
-                int next_gold=cursor.getInt(1)+((lvl/5)+1)*5;
+                int next_gold=cursor.getInt(1)+((lvl/5)+1)*100;
                 cursor.close();
                 try {
                     dbrw.execSQL("UPDATE myTable SET value = " + next_lvl + " WHERE data LIKE 'LVL'");
@@ -154,13 +154,13 @@ public class battle extends AppCompatActivity {
     }
     private void result(int rand,String r){
         if(rand==0){
-            Toast.makeText(this,"電腦出的是 布 "+r, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"電腦出的是【布】 "+r, Toast.LENGTH_SHORT).show();
         }
         else if(rand==1){
-            Toast.makeText(this,"電腦出的是 石頭 "+r,Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"電腦出的是【石頭】"+r,Toast.LENGTH_SHORT).show();
         }
         else if(rand==2){
-            Toast.makeText(this,"電腦出的是 剪刀 "+r,Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"電腦出的是【剪刀】"+r,Toast.LENGTH_SHORT).show();
         }
         try {
             Thread.sleep(2000);
@@ -192,7 +192,7 @@ public class battle extends AppCompatActivity {
         cursor.moveToFirst();
         int lvl=cursor.getInt(1);
         cursor.close();
-        int hp=20+lvl*10;
+        int hp=10+((lvl-1)*5);
         enemy_hp.setText(hp+"HP"+"/"+hp+"HP");
         return hp;
     }

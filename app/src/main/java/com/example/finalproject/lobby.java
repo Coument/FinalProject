@@ -101,7 +101,7 @@ public class lobby extends AppCompatActivity {
                 Image.setImageResource(R.drawable.img_d);
                 break;
             default:
-                Image.setImageResource(R.drawable.img_a);
+                Image.setImageResource(R.drawable.img);
         }
     }
 
@@ -111,9 +111,9 @@ public class lobby extends AppCompatActivity {
         cursor.moveToFirst();
         int lvl = cursor.getInt(1);
         cursor.close();
-        int hp = 20 + lvl * 10;
+        int hp = 10+((lvl-1)*5);
         int atk = 3 + lvl;
-        enemy_status.setText(" HP  :" + hp + "\n\nATK :" + atk);
+        enemy_status.setText(" Enemy Status:\n\nHP  :" + hp + "\nATK :" + atk);
     }
 
     private void set_user() {
@@ -127,7 +127,7 @@ public class lobby extends AppCompatActivity {
         cursor_ATK.moveToFirst();
         int ATK = cursor_ATK.getInt(1);
         cursor_ATK.close();
-        your_status.setText(" HP  :" + HP + "\n\nATK :" + ATK);
+        your_status.setText(" My Status:\n\nHP  :" + HP + "\nATK :" + ATK);
     }
 
     @Override
